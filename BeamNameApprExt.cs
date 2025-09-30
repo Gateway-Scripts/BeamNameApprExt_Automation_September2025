@@ -63,11 +63,12 @@ namespace VMS.TPS
                         //testing automation in the approval Extension.
                         plan.Beams.First(b=>b.Id == bnm.Key).Name = calculatedBeamNames[bnm.Key];
                     }
-                    //key is to add to the result.
-                    result.Add(new PlanValidationResultDetail(plan.Id, message,
-                        PlanValidationResultDetail.ResultClassification.ValidationWarning, "GS001"));
+                    
 
                 }
+                //key is to add to the result.
+                result.Add(new PlanValidationResultDetail(plan.Id, message,
+                    PlanValidationResultDetail.ResultClassification.ValidationWarning, "GS001"));
             }
             return result;
         }
